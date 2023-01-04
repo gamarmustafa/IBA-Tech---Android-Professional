@@ -46,28 +46,8 @@ class NotesFragment: Fragment(R.layout.fragment_notes),NoteAdapter.OnItemClickLi
     }
 
     override fun onItemClick(note: Note) {
-        val editDialog = Dialog(requireContext(),R.style.Theme_Dialog)
-        editDialog.setCanceledOnTouchOutside(true)
-        val editDialogBinding = DialogEditNoteBinding.inflate(layoutInflater)
-        editDialog.setContentView(editDialogBinding.root)
-
-        editDialogBinding.apply {
-            etEditTitle.setText(note.title)
-            etEditBody.setText(note.body)
-        }
-        editDialogBinding.tvUpdate.setOnClickListener {
-            val title = editDialogBinding.etEditTitle.text.toString()
-            val body = editDialogBinding.etEditBody.text.toString()
-            viewModel.updateNote(note,title,body)
-            editDialog.dismiss()
-        }
-        editDialogBinding.btDeleteNote.setOnClickListener {
-            viewModel.deleteNote(note)
-            editDialog.dismiss()
-        }
-        editDialogBinding.tvCancel.setOnClickListener {
-            editDialog.dismiss()
-        }
-        editDialog.show()
+        val id = note.id
+        val action = NotesFragmentDirections.actionNotesFragmentToDetailsFragment(id)
+        findNavController().navigate(action)
     }
 }

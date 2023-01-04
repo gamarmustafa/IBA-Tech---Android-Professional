@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">noteapp</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis felis malesuada cursus pharetra. In eget enim dui. Vivamus maximus non neque nec faucibus.</string>
 </resources>
