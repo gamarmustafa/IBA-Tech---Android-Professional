@@ -4,11 +4,11 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.room.Room
-import com.vholodynskyi.assignment.api.RetrofitServicesProvider
-import com.vholodynskyi.assignment.api.contacts.ContactsService
-import com.vholodynskyi.assignment.db.AppDatabase
-import com.vholodynskyi.assignment.ui.contactslist.ContactsListViewModel
-import com.vholodynskyi.assignment.ui.details.DetailsViewModel
+import com.vholodynskyi.assignment.data.remote.api.RetrofitServicesProvider
+import com.vholodynskyi.assignment.data.remote.api.contacts.ContactsService
+import com.vholodynskyi.assignment.data.local.db.AppDatabase
+import com.vholodynskyi.assignment.presentation.ui.contactslist.ContactsListViewModel
+import com.vholodynskyi.assignment.presentation.ui.details.DetailsViewModel
 
 object GlobalFactory: ViewModelProvider.Factory {
 

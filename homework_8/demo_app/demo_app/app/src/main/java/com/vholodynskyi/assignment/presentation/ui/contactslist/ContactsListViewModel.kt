@@ -1,4 +1,4 @@
-package com.vholodynskyi.assignment.ui.contactslist
+package com.vholodynskyi.assignment.presentation.ui.contactslist
 
 import androidx.lifecycle.ViewModel
 

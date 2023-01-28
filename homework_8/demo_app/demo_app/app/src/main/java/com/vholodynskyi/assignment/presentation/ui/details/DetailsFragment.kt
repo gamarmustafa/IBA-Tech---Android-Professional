@@ -1,4 +1,4 @@
-package com.vholodynskyi.assignment.ui.details
+package com.vholodynskyi.assignment.presentation.ui.details
 
 import android.os.Bundle
 import android.view.LayoutInflater
