@@ -64,10 +64,16 @@ dependencies {
     implementation "androidx.room:room-runtime:$roomVersion"
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-moshi:$retrofitVersion"
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion"
 
     // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:$roomVersion")
     // optional - Kotlin Extensions and Coroutines support for Room
-    implementation("androidx.room:room-ktx:$roomVersion")
+    implementation("androidx.room:room-ktx:2.5.0")
+
+    // Hilt
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
 }
