@@ -13,7 +13,7 @@ class GetAllContactsUseCase @Inject constructor(private val repository: ContactR
     operator fun invoke() = flow {
         try {
             emit(Resource.Loading<List<ApiContact>>())
-            val result = repository.getContactsList().map { it }
+            val result = repository.getContactsList()
             emit(Resource.Success(result))
         } catch (e: HttpException) {
             emit(Resource.Error(e.localizedMessage ?: "An unexpected error occurred"))

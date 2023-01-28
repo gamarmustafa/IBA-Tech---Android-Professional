@@ -12,3 +12,4 @@ data class DbContact(
     @ColumnInfo val email: String?,
     @ColumnInfo val photo: String?,
 )
+
